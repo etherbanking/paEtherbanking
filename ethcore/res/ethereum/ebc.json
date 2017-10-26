@@ -14,7 +14,10 @@
         "eip155Transition": 2463000,
         "eip160Transition": 10,
         "eip161abcTransition": 10,
-        "eip161dTransition": 10
+        "eip161dTransition": 10,
+        "eip998Reward": "0x0",
+		"eip998Transition": "‭0x2540BE400‬"
+		
       }
     }
   },

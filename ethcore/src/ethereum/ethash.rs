@@ -86,10 +86,17 @@ pub struct EthashParams {
 	pub block_reward: U256,
 	/// EIP-649 transition block.
 	pub eip649_transition: u64,
+	
+	/// EIP-998 transition block.
+	pub eip998_transition: u64,
+	
 	/// EIP-649 bomb delay.
 	pub eip649_delay: u64,
 	/// EIP-649 base reward.
 	pub eip649_reward: Option<U256>,
+	
+	/// EIP-998 base reward.
+	pub eip998_reward: Option<U256>,
 }
 
 impl From<ethjson::spec::EthashParams> for EthashParams {
@@ -116,8 +123,10 @@ impl From<ethjson::spec::EthashParams> for EthashParams {
 			mcip3_dev_contract: p.mcip3_dev_contract.map_or_else(Address::new, Into::into),
 			block_reward: p.block_reward.map_or_else(Default::default, Into::into),
 			eip649_transition: p.eip649_transition.map_or(u64::max_value(), Into::into),
+			eip998_transition: p.eip998_transition.map_or(u64::max_value(), Into::into),
 			eip649_delay: p.eip649_delay.map_or(DEFAULT_EIP649_DELAY, Into::into),
 			eip649_reward: p.eip649_reward.map(Into::into),
+			eip998_reward: p.eip998_reward.map(Into::into),
 		}
 	}
 }
@@ -206,6 +215,8 @@ impl Engine<EthereumMachine> for Arc<Ethash> {
 		// Applies EIP-649 reward.
 		let reward = if number >= self.ethash_params.eip649_transition {
 			self.ethash_params.eip649_reward.unwrap_or(self.ethash_params.block_reward)
+		} else if number >= self.ethash_params.eip998_transition {
+			self.ethash_params.eip998_reward.unwrap_or(self.ethash_params.block_reward)
 		} else {
 			self.ethash_params.block_reward
 		};

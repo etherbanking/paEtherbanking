@@ -117,6 +117,10 @@ pub struct EthashParams {
 	/// EIP-649 transition block.
 	#[serde(rename="eip649Transition")]
 	pub eip649_transition: Option<Uint>,
+	
+	/// EIP-998 transition block.
+	#[serde(rename="eip998Transition")]
+	pub eip998_transition: Option<Uint>,
 
 	/// EIP-649 bomb delay.
 	#[serde(rename="eip649Delay")]
@@ -125,6 +129,10 @@ pub struct EthashParams {
 	/// EIP-649 base reward.
 	#[serde(rename="eip649Reward")]
 	pub eip649_reward: Option<Uint>,
+	
+	/// EIP-998 base reward.
+	#[serde(rename="eip649Reward")]
+	pub eip998_reward: Option<Uint>,
 }
 
 /// Ethash engine deserialization.
