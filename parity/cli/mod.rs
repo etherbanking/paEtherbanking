@@ -299,9 +299,9 @@ usage! {
 			testing - Testing releases (do not use).
 			current - Whatever track this executable was released on",
 
-			ARG arg_chain: (String) = "foundation", or |c: &Config| otry!(c.parity).chain.clone(),
+			ARG arg_chain: (String) = "ebc", or |c: &Config| otry!(c.parity).chain.clone(),
 			"--chain=[CHAIN]",
-			"Specify the blockchain type. CHAIN may be either a JSON chain specification file or olympic, frontier, homestead, mainnet, morden, ropsten, classic, expanse, musicoin, testnet, kovan or dev.",
+			"Specify the blockchain type. CHAIN may be either a JSON chain specification file or ebc, olympic, frontier, homestead, mainnet, morden, ropsten, classic, expanse, musicoin, testnet, kovan or dev.",
 
 			ARG arg_keys_path: (String) = "$BASE/keys", or |c: &Config| otry!(c.parity).keys_path.clone(),
 			"--keys-path=[PATH]",

@@ -50,6 +50,11 @@ fn load_machine(b: &[u8]) -> EthereumMachine {
 	Spec::load_machine(b).expect("chain spec is invalid")
 }
 
+/// Create a new Ebc chain spec.
+pub fn new_ebc<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
+	load(params.into(), include_bytes!("../../res/ethereum/ebc.json"))
+}
+
 /// Create a new Foundation Olympic chain spec.
 pub fn new_olympic<'a, T: Into<SpecParams<'a>>>(params: T) -> Spec {
 	load(params.into(), include_bytes!("../../res/ethereum/olympic.json"))
@@ -180,4 +185,16 @@ mod tests {
 
 		let _ = frontier.engine;
 	}
+	
+	#[test]
+	fn ebc() {
+		let ebc = new_ebc(&::std::env::temp_dir());
+
+		assert_eq!(ebc.state_root(), "d7f8974fb5ac78d9ac099b9ad5018bedc2ce0a72dad1827a1709da30580f0544".into());
+		let genesis = ebc.genesis_block();
+		assert_eq!(BlockView::new(&genesis).header_view().hash(), "d4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3".into());
+
+		let _ = ebc.engine;
+	}
+	
 }

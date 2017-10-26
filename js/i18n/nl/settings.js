@@ -23,6 +23,7 @@ export default {
   },
   parity: {
     chains: {
+      chain_ebc: `Parity synchroniseert met het EBC netwerk wat door de EBC Foundation is uitgebracht`,	
       chain_classic: `Parity synchroniseert met het Ethereum Classic netwerk`,
       chain_dev: `Parity gebruikt een lokale ontwikkelaars chain`,
       chain_expanse: `Parity synchroniseert met het Expanse netwerk`,

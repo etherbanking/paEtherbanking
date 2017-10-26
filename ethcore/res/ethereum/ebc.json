@@ -1,0 +1,54 @@
+{
+  "name": "ebc",
+  "engine": {
+    "Ethash": {
+      "params": {
+        "gasLimitBoundDivisor": "0x400",
+        "minimumDifficulty": "0x20000",
+        "difficultyBoundDivisor": "0x800",
+        "durationLimit": "0xd",
+        "blockReward": "0x5AF3107A4000",
+        "registrar": "0x81a4b044831c4f12ba601adb9274516939e9b8a2",
+        "homesteadTransition": 200000,
+        "eip150Transition": 2463000,
+        "eip155Transition": 2463000,
+        "eip160Transition": 10,
+        "eip161abcTransition": 10,
+        "eip161dTransition": 10
+      }
+    }
+  },
+  "params": {
+    "accountStartNonce": "0x0",
+    "maximumExtraDataSize": "0x20",
+    "minGasLimit": "0x1388",
+    "networkID": 82870892,
+    "eip98Transition": 9223372036854775807,
+    "gasLimitBoundDivisor": "0x400"
+  },
+  "genesis": {
+    "seal": {
+      "ethereum": {
+        "nonce": "0x0000000000000023",
+        "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "difficulty": "0x1000",
+    "author": "0x0000000000000000000000000000000000000000",
+    "timestamp": "0x0",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "0x",
+    "gasLimit": "0x47b760"
+  },
+  "nodes": [
+                "enode://5242619259d5e5d2cf085183e21f355d1f4f1e7a9c6fbea53855e8562e64638f067cdaf5c19f6d22e5e0dbdc9aa9959334b4a879c4ba7cdf76fa97380e03a246@45.76.206.141:62688"
+        ],
+  "accounts": {
+    "0x5448639b29ee9eaba6869480ebea82d82e07a50e": {
+      "balance": "150000000000000000000000000"
+    },
+    "0x85e21587faabd6c94dac70cc725159b286ab4fca": {
+      "balance": "5000000000000000000000000000"
+    }
+  }
+}

@@ -67,5 +67,14 @@ mod difficulty_test_foundation {
 	declare_test!{DifficultyTests_difficultyMainNetwork, "BasicTests/difficultyMainNetwork.json"}
 }
 
+mod difficulty_test_ebc {
+	use super::json_difficulty_test;
+
+	fn do_json_test(json_data: &[u8]) -> Vec<String> {
+		json_difficulty_test(json_data, ::ethereum::new_ebc(&::std::env::temp_dir()))
+	}
+
+	declare_test!{DifficultyTests_difficultyMainNetwork, "BasicTests/difficultyMainNetwork.json"}
+}
 
 

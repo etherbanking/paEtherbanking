@@ -233,7 +233,7 @@ impl Args {
 				spec::Spec::load(&::std::env::temp_dir(), file)?
 			},
 			None => {
-				ethcore::ethereum::new_foundation(&::std::env::temp_dir())
+				ethcore::ethereum::new_ebc(&::std::env::temp_dir())
 			},
 		})
 	}

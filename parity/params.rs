@@ -28,6 +28,7 @@ use user_defaults::UserDefaults;
 
 #[derive(Debug, PartialEq)]
 pub enum SpecType {
+	Ebc,
 	Foundation,
 	Morden,
 	Ropsten,
@@ -51,6 +52,7 @@ impl str::FromStr for SpecType {
 
 	fn from_str(s: &str) -> Result<Self, Self::Err> {
 		let spec = match s {
+			"ebc" => SpecType::Ebc,
 			"foundation" | "frontier" | "homestead" | "mainnet" => SpecType::Foundation,
 			"frontier-dogmatic" | "homestead-dogmatic" | "classic" => SpecType::Classic,
 			"morden" | "classic-testnet" => SpecType::Morden,
@@ -69,6 +71,7 @@ impl str::FromStr for SpecType {
 impl fmt::Display for SpecType {
 	fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
 		f.write_str(match *self {
+			SpecType::Ebc => "ebc",
 			SpecType::Foundation => "foundation",
 			SpecType::Morden => "morden",
 			SpecType::Ropsten => "ropsten",
@@ -87,6 +90,7 @@ impl SpecType {
 	pub fn spec<'a, T: Into<SpecParams<'a>>>(&self, params: T) -> Result<Spec, String> {
 		let params = params.into();
 		match *self {
+			SpecType::Ebc => Ok(ethereum::new_ebc(params)),
 			SpecType::Foundation => Ok(ethereum::new_foundation(params)),
 			SpecType::Morden => Ok(ethereum::new_morden(params)),
 			SpecType::Ropsten => Ok(ethereum::new_ropsten(params)),
@@ -332,6 +336,7 @@ mod tests {
 
 	#[test]
 	fn test_spec_type_parsing() {
+		assert_eq!(SpecType::Ebc, "ebc".parse().unwrap());
 		assert_eq!(SpecType::Foundation, "frontier".parse().unwrap());
 		assert_eq!(SpecType::Foundation, "homestead".parse().unwrap());
 		assert_eq!(SpecType::Foundation, "mainnet".parse().unwrap());
@@ -352,6 +357,7 @@ mod tests {
 
 	#[test]
 	fn test_spec_type_display() {
+		assert_eq!(format!("{}", SpecType::Ebc), "ebc");
 		assert_eq!(format!("{}", SpecType::Foundation), "foundation");
 		assert_eq!(format!("{}", SpecType::Ropsten), "ropsten");
 		assert_eq!(format!("{}", SpecType::Morden), "morden");

@@ -27,6 +27,7 @@ export default {
   },
   parity: {
     chains: {
+      chain_ebc: `Parity syncs to the EBC network launched by the EBC Foundation`, // Parity syncs to the Ethereum network launched by the Ethereum Foundation	
       chain_classic: `将Parity同步至以太坊经典网络`, // Parity syncs to the Ethereum Classic network
       chain_dev: `将Parity使用一条本地开发用区块链`, // Parity uses a local development chain
       chain_expanse: `将Parity同步至Expanse网络`, // Parity syncs to the Expanse network

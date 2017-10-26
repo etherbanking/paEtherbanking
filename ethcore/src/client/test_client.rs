@@ -750,7 +750,7 @@ impl BlockChainClient for TestBlockChainClient {
 
 	fn set_mode(&self, _: Mode) { unimplemented!(); }
 
-	fn spec_name(&self) -> String { "foundation".into() }
+	fn spec_name(&self) -> String { "ebc".into() }
 
 	fn set_spec_name(&self, _: String) { unimplemented!(); }
 
