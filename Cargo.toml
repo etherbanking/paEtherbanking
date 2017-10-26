@@ -1,6 +1,6 @@
 [package]
 description = "Parity Ethereum client"
-name = "parity"
+name = "pebc"
 version = "1.9.0"
 license = "GPL-3.0"
 authors = ["Parity Technologies <admin@parity.io>"]
