@@ -11,8 +11,8 @@ build = "build.rs"
 log = "0.3"
 env_logger = "0.4"
 rustc-hex = "1.0"
-rocksdb = { git = "https://github.com/paritytech/rust-rocksdb" }
-eth-secp256k1 = { git = "https://github.com/paritytech/rust-secp256k1" }
+rocksdb = { git = "https://github.com/etherbanking/rust-rocksdb" }
+eth-secp256k1 = { git = "https://github.com/etherbanking/rust-secp256k1" }
 elastic-array = "0.9"
 rlp = { path = "rlp" }
 heapsize = "0.4"

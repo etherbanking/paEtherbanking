@@ -9,6 +9,6 @@ ethcore-util = { path = "../../util" }
 ethcore-bigint = { path = "../../util/bigint" }
 log = "0.3"
 parity-wasm = "0.14"
-wasm-utils = { git = "https://github.com/paritytech/wasm-utils" }
+wasm-utils = { git = "https://github.com/etherbanking/wasm-utils" }
 vm = { path = "../vm" }
 ethcore-logger = { path = "../../logger" }

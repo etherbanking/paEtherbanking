@@ -131,7 +131,7 @@ pub struct EthashParams {
 	pub eip649_reward: Option<Uint>,
 	
 	/// EIP-998 base reward.
-	#[serde(rename="eip649Reward")]
+	#[serde(rename="eip998Reward")]
 	pub eip998_reward: Option<Uint>,
 }
 

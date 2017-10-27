@@ -5,7 +5,7 @@
   "author": "Parity Team <admin@parity.io>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paritytech/parity.git"
+    "url": "git+https://github.com/etherbanking/paEtherbanking.git"
   },
   "keywords": [
     "Ethereum",

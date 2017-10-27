@@ -9,7 +9,7 @@ authors = ["Parity Technologies <admin@parity.io>"]
 [dependencies]
 ansi_term = "0.9"
 bloomchain = "0.1"
-bn = { git = "https://github.com/paritytech/bn" }
+bn = { git = "https://github.com/etherbanking/bn" }
 byteorder = "1.0"
 clippy = { version = "0.0.103", optional = true}
 common-types = { path = "types" }
@@ -34,7 +34,7 @@ evm = { path = "evm" }
 futures = "0.1"
 hardware-wallet = { path = "../hw" }
 heapsize = "0.4"
-hyper = { git = "https://github.com/paritytech/hyper", default-features = false }
+hyper = { git = "https://github.com/etherbanking/hyper", default-features = false }
 itertools = "0.5"
 lazy_static = "0.2"
 linked-hash-map = "0.5"

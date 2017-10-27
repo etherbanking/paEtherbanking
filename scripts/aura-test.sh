@@ -1,6 +1,6 @@
 #!/bin/bash
 cargo build -j $(nproc) --release --features final $CARGOFLAGS
-git clone https://github.com/paritytech/parity-import-tests
+git clone https://github.com/etherbanking/parity-import-tests
 cp target/release/parity parity-import-tests/aura/parity
 cd parity-import-tests/aura
 echo "Start Aura test"

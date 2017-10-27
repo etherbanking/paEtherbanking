@@ -16,9 +16,8 @@
         "eip161abcTransition": 10,
         "eip161dTransition": 10,
         "eip998Reward": "0x0",
-		"eip998Transition": "‭0x2540BE400‬"
-		
-      }
+		"eip998Transition": "0x2540BE400"
+		}
     }
   },
   "params": {
