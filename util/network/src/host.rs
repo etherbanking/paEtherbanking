@@ -49,7 +49,7 @@ type Slab<T> = ::slab::Slab<T, usize>;
 const MAX_SESSIONS: usize = 1024 + MAX_HANDSHAKES;
 const MAX_HANDSHAKES: usize = 1024;
 
-const DEFAULT_PORT: u16 = 30303;
+const DEFAULT_PORT: u16 = 62688;
 
 // StreamToken/TimerToken
 const TCP_ACCEPT: StreamToken = SYS_TIMER + 1;

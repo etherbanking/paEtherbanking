@@ -29,7 +29,7 @@ interface = "127.0.0.1"
 path = "$HOME/.parity/signer"
 
 [network]
-port = 30303
+port = 62688
 min_peers = 25
 max_peers = 50
 nat = "any"

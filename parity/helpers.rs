@@ -199,7 +199,7 @@ pub fn default_network_config() -> ::ethsync::NetworkConfiguration {
 	NetworkConfiguration {
 		config_path: Some(replace_home(&::dir::default_data_path(), "$BASE/network")),
 		net_config_path: None,
-		listen_address: Some("0.0.0.0:30303".into()),
+		listen_address: Some("0.0.0.0:62688".into()),
 		public_address: None,
 		udp_port: None,
 		nat_enabled: true,

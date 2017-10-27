@@ -108,15 +108,15 @@ section "install"
 	createShortCut "$DESKTOP\${APPNAME} Ethereum.lnk" "$INSTDIR\ptray.exe" "ui" "$INSTDIR\logo.ico"
 
 	# Firewall remove rules if exists
-	SimpleFC::AdvRemoveRule "Parity incoming peers (TCP:30303)"
-	SimpleFC::AdvRemoveRule "Parity outgoing peers (TCP:30303)"
+	SimpleFC::AdvRemoveRule "Parity incoming peers (TCP:62688)"
+	SimpleFC::AdvRemoveRule "Parity outgoing peers (TCP:62688)"
 	SimpleFC::AdvRemoveRule       "Parity web queries (TCP:80)"
-	SimpleFC::AdvRemoveRule  "Parity UDP discovery (UDP:30303)"
+	SimpleFC::AdvRemoveRule  "Parity UDP discovery (UDP:62688)"
 
 	# Firewall exception rules
-	SimpleFC::AdvAddRule "Parity incoming peers (TCP:30303)" ""  6 1 1 2147483647 1 "$INSTDIR\parity.exe" "" "" "Parity" 30303    "" "" ""
-	SimpleFC::AdvAddRule "Parity outgoing peers (TCP:30303)" ""  6 2 1 2147483647 1 "$INSTDIR\parity.exe" "" "" "Parity"    "" 30303 "" ""
-	SimpleFC::AdvAddRule  "Parity UDP discovery (UDP:30303)" "" 17 2 1 2147483647 1 "$INSTDIR\parity.exe" "" "" "Parity"    "" 30303 "" ""
+	SimpleFC::AdvAddRule "Parity incoming peers (TCP:62688)" ""  6 1 1 2147483647 1 "$INSTDIR\parity.exe" "" "" "Parity" 62688    "" "" ""
+	SimpleFC::AdvAddRule "Parity outgoing peers (TCP:62688)" ""  6 2 1 2147483647 1 "$INSTDIR\parity.exe" "" "" "Parity"    "" 62688 "" ""
+	SimpleFC::AdvAddRule  "Parity UDP discovery (UDP:62688)" "" 17 2 1 2147483647 1 "$INSTDIR\parity.exe" "" "" "Parity"    "" 62688 "" ""
 
 	# Registry information for add/remove programs
 	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "DisplayName" "${APPNAME} - ${DESCRIPTION}"
@@ -177,10 +177,10 @@ section "uninstall"
 	rmDir $INSTDIR
 
 	# Firewall exception rules
-	SimpleFC::AdvRemoveRule "Parity incoming peers (TCP:30303)"
-	SimpleFC::AdvRemoveRule "Parity outgoing peers (TCP:30303)"
+	SimpleFC::AdvRemoveRule "Parity incoming peers (TCP:62688)"
+	SimpleFC::AdvRemoveRule "Parity outgoing peers (TCP:62688)"
 	SimpleFC::AdvRemoveRule       "Parity web queries (TCP:80)"
-	SimpleFC::AdvRemoveRule  "Parity UDP discovery (UDP:30303)"
+	SimpleFC::AdvRemoveRule  "Parity UDP discovery (UDP:62688)"
 
 	# Remove uninstaller information from the registry
 	DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}"

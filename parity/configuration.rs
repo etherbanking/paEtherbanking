@@ -1433,7 +1433,7 @@ mod tests {
 		assert_eq!(conf.network_settings(), Ok(NetworkSettings {
 			name: "testname".to_owned(),
 			chain: "kovan".to_owned(),
-			network_port: 30303,
+			network_port: 62688,
 			rpc_enabled: true,
 			rpc_interface: "127.0.0.1".to_owned(),
 			rpc_port: 8545,

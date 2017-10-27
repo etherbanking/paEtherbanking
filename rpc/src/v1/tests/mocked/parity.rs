@@ -68,7 +68,7 @@ impl Dependencies {
 			settings: Arc::new(NetworkSettings {
 				name: "mynode".to_owned(),
 				chain: "testchain".to_owned(),
-				network_port: 30303,
+				network_port: 62688,
 				rpc_enabled: true,
 				rpc_interface: "all".to_owned(),
 				rpc_port: 8545,
@@ -343,7 +343,7 @@ fn rpc_parity_net_port() {
 	let io = deps.default_client();
 
 	let request = r#"{"jsonrpc": "2.0", "method": "parity_netPort", "params":[], "id": 1}"#;
-	let response = r#"{"jsonrpc":"2.0","result":30303,"id":1}"#;
+	let response = r#"{"jsonrpc":"2.0","result":62688,"id":1}"#;
 
 	assert_eq!(io.handle_request_sync(request), Some(response.to_owned()));
 }

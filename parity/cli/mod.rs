@@ -405,7 +405,7 @@ usage! {
 			"--no-serve-light",
 			"Disable serving of light peers.",
 
-			ARG arg_port: (u16) = 30303u16, or |c: &Config| otry!(c.network).port.clone(),
+			ARG arg_port: (u16) = 62688u16, or |c: &Config| otry!(c.network).port.clone(),
 			"--port=[PORT]",
 			"Override the port on which the node should listen.",
 
@@ -1424,7 +1424,7 @@ mod tests {
 
 			// -- Networking Options
 			flag_no_warp: false,
-			arg_port: 30303u16,
+			arg_port: 62688u16,
 			arg_min_peers: 25u16,
 			arg_max_peers: 50u16,
 			arg_max_pending_peers: 64u16,
