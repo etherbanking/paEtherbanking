@@ -456,7 +456,7 @@
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
 				<key>IDENTIFIER</key>
-				<string>io.parity.ethereum</string>
+				<string>parity.etherbanking</string>
 				<key>NAME</key>
 				<string>Parity</string>
 				<key>OVERWRITE_PERMISSIONS</key>

@@ -45,7 +45,7 @@ fn parity_base() -> PathBuf {
 	let mut home = home();
 	home.push("Library");
 	home.push("Application Support");
-	home.push("io.parity.ethereum");
+	home.push("parity.etherbanking");
 	home.push("keys");
 	home
 }
@@ -55,7 +55,7 @@ fn parity_base() -> PathBuf {
 	let mut home = home();
 	home.push("AppData");
 	home.push("Roaming");
-	home.push("Parity");
+	home.push("parity.etherbanking");
 	home.push("Ethereum");
 	home.push("keys");
 	home
@@ -66,7 +66,7 @@ fn parity_base() -> PathBuf {
 	let mut home = home();
 	home.push(".local");
 	home.push("share");
-	home.push("io.parity.ethereum");
+	home.push("parity.etherbanking");
 	home.push("keys");
 	home
 }
@@ -75,7 +75,7 @@ fn parity_base() -> PathBuf {
 fn geth_base() -> PathBuf {
 	let mut home = home();
 	home.push("Library");
-	home.push("Ethereum");
+	home.push("parity.etherbanking");
 	home
 }
 
