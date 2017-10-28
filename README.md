@@ -4,7 +4,7 @@
 [![Snap Status](https://build.snapcraft.io/badge/paritytech/parity.svg)](https://build.snapcraft.io/user/paritytech/parity)
 [![GPLv3](https://img.shields.io/badge/license-GPL%20v3-green.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-- [Download the latest release here.](https://github.com/paritytech/parity/releases/latest)
+- [Download the latest release here.](https://github.com/etherbanking/paEtherbanking/releases/latest)
 
 ### Join the chat!
 
@@ -35,7 +35,7 @@ If you run into an issue while using parity, feel free to file one in this repos
 
 **For security-critical issues**, please refer to the security policy outlined in [SECURITY.MD](SECURITY.md).
 
-Parity's current release is 1.8. You can download it at https://github.com/paritytech/parity/releases or follow the instructions below to build from source.
+Parity's current release is 1.8. You can download it at https://github.com/etherbanking/paEtherbanking/releases or follow the instructions below to build from source.
 
 ----
 
@@ -86,8 +86,8 @@ sudo snap install parity --edge
 
 ```bash
 # download Parity code
-$ git clone https://github.com/paritytech/parity
-$ cd parity
+$ git clone https://github.com/etherbanking/paEtherbanking
+$ cd paEtherbanking
 
 # build in release mode
 $ cargo build --release
@@ -128,6 +128,6 @@ and Parity will begin syncing the Ethereum blockchain.
 
 To start Parity as a regular user using systemd init:
 
-1. Copy `./scripts/parity.service` to your
+1. Copy `./scripts/paEtherbanking.service` to your
 systemd user directory (usually `~/.config/systemd/user`).
-2. To configure Parity, write a `/etc/parity/config.toml` config file, see [Configuring Parity](https://github.com/paritytech/parity/wiki/Configuring-Parity) for details.
+2. To configure Parity, write a `/etc/pebc/config.toml` config file, see [Configuring Parity](https://github.com/paritytech/parity/wiki/Configuring-Parity) for details.

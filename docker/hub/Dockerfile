@@ -48,8 +48,8 @@ RUN apt-get update && \
 # show backtraces
  RUST_BACKTRACE=1 && \
 # build parity
-cd /build&&git clone https://github.com/paritytech/parity && \
-        cd parity && \
+cd /build&&git clone https://github.com/etherbanking/paEtherbanking && \
+        cd paEtherbanking && \
 	git pull&& \
 	git checkout $BUILD_TAG && \
         cargo build --verbose --release --features final && \

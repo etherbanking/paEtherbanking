@@ -6,7 +6,7 @@ Code generator to simplify creating a built-in Parity Dapp
 1. Clone this repository.
 
    ```bash
-   $ git clone https://github.com/paritytech/parity.git
+   $ git clone https://github.com/etherbanking/paEtherbanking.git
    ```
 
 1. Create a new directory for your Dapp. (`./myapp`)
