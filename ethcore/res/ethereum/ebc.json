@@ -9,9 +9,9 @@
         "durationLimit": "0xd",
         "blockReward": "0x5AF3107A4000",
         "registrar": "0x81a4b044831c4f12ba601adb9274516939e9b8a2",
-        "homesteadTransition": 200000,
-        "eip150Transition": 2463000,
-        "eip155Transition": 2463000,
+        "homesteadTransition": 0,
+        "eip150Transition": 0,
+        "eip155Transition": 0,
         "eip160Transition": 10,
         "eip161abcTransition": 10,
         "eip161dTransition": 10,
@@ -37,20 +37,23 @@
     },
     "difficulty": "0x1000",
     "author": "0x0000000000000000000000000000000000000000",
-    "timestamp": "0x0",
+    "timestamp": "0x59D03000",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "extraData": "0x",
     "gasLimit": "0x47b760"
   },
   "nodes": [
-                "enode://5242619259d5e5d2cf085183e21f355d1f4f1e7a9c6fbea53855e8562e64638f067cdaf5c19f6d22e5e0dbdc9aa9959334b4a879c4ba7cdf76fa97380e03a246@45.76.206.141:62688"
+                "enode://51546797036787f2eebc570913ecbf554e5857c9b3ac9123bf3edc56a5fac4ebc11269d5d82524b15e851a83f126c4ac8369366e488efac58f011f3da8fcce1a@45.76.151.180:62688"
         ],
   "accounts": {
-    "0x5448639b29ee9eaba6869480ebea82d82e07a50e": {
-      "balance": "150000000000000000000000000"
+    "0xc22fa356a0c1c5b9073958495db7e836e581ac19": {
+      "balance": "10000000000000000000000000"
     },
-    "0x85e21587faabd6c94dac70cc725159b286ab4fca": {
-      "balance": "5000000000000000000000000000"
+    "0xa96e6618b7c97095c4c9fd8e247aaef647ef35cd": {
+      "balance": "10000000000000000000000000"
+    },
+    "0xbf16be05a48cbfd8b1f10ec3bc70cdcf1e3c48a3": {
+      "balance": "12000000000000000000000000"
     }
   }
 }
